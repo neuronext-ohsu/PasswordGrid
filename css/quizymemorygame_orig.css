@@ -1,0 +1,193 @@
+/*
+ CSS for Memogry game plugin
+ Author: Yane Frenski
+*/
+
+/* the stle for the wrapper element */
+.quizy-memorygame{
+  position:relative;
+  width:100%;
+}
+
+/* styles of the card to show */
+.quizy-memorygame .mgcard-show{
+  width:156px;
+  height:156px;
+  background:url('img/mg-mcard.png');
+}
+
+.quizy-memorygame .quizy-mg-item{
+  position:absolute;
+  cursor:pointer;
+  text-align:center;
+}
+
+.quizy-memorygame .quizy-mg-item .quizy-mg-item-bottom, .quizy-memorygame .quizy-mg-item .quizy-mg-item-top{
+  position:absolute;
+  top:0;
+  left:0;
+  text-align:center;
+}
+
+.quizy-mg-item .quizy-mg-item-top{
+  background:url('img/quizy-mg-item-top.png');
+}
+
+/* styles for the popup notifications */
+.quizy-mg-notification-fly{
+  width:90px;
+  height:90px;
+  position:absolute;
+  z-index:1000;
+  display:none;
+  -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+}
+
+.quizy-mg-notification-fly-neg{
+  background:url('img/quizy-mg-notif-neg.png');
+}
+
+.quizy-mg-notification-fly-pos{
+  background:url('img/quizy-mg-notif-pos.png');
+}
+
+/* styles for the game summary */
+#quizy-game-summary {
+  width:300px;
+  height:120px;
+  position:absolute;
+  z-index:1001;
+  background: #515b69;
+  box-shadow: rgba(0,0,0,0.7) 0 0 4px, inset 0 0 20px rgba(0, 0, 0, 0.4);;
+  border:1px solid #000;
+  cursor:pointer;
+  display:none;
+}
+
+#quizy-game-summary div{
+  width:75px;
+  float:left;
+  padding:10px 0 10px 20px;
+  color:#fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);
+  text-align:center;
+}
+
+#quizy-game-summary #gs-column1{
+  font-size:16px;
+  padding-top:30px;
+}
+
+#quizy-game-summary #gs-column2{
+  font-size:12px;
+  padding-top: 65px;
+  background:url('img/mg-timeicon.png') no-repeat 70% 25%;
+}
+
+#quizy-game-summary #gs-column3{
+  font-size:12px;
+  padding-top: 65px;
+  background:url('img/mg-clickicon.png') no-repeat 70% 25%;
+}
+
+/*#quizy-game-summary #gs-column4{
+  font-size:12px;
+  padding-top: 65px;
+  background:url('img/bell.png') no-repeat 70% 25%;
+}*/
+
+/*
+------------------------------
+	Impromptu
+------------------------------
+*/
+.jqifade{
+	position: absolute; 
+	/*background-color: #777777;*/ 
+}
+div.jqi{ 
+	width: 400px; 
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	position: absolute; 
+	background-color: #ffffff; 
+	font-size: 12px; 
+	text-align: left; 
+	border: solid 1px #eeeeee;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	padding: 7px;
+}
+div.jqi .jqicontainer{ 
+}
+div.jqi .jqiclose{ 
+	position: absolute;
+	top: 4px; right: -2px; 
+	width: 18px; 
+	cursor: default; 
+	color: #bbbbbb; 
+	font-weight: bold; 
+}
+div.jqi .jqititle{
+	padding: 5px 10px;
+	font-size: 16px; 
+	line-height: 20px; 
+	border-bottom: solid 1px #eeeeee;
+}
+div.jqi .jqimessage{ 
+	padding: 10px; 
+	line-height: 20px; 
+	color: #444444; 
+}
+div.jqi .jqibuttons{ 
+	text-align: right; 
+	padding: 5px 0 5px 0; 
+	border: solid 1px #eeeeee; 
+	background-color: #f4f4f4;
+}
+div.jqi button{ 
+	padding: 3px 10px; 
+	margin: 0 10px; 
+	background-color: #2F6073; 
+	border: solid 1px #f4f4f4; 
+	color: #ffffff; 
+	font-weight: bold; 
+	font-size: 12px; 
+}
+div.jqi button:hover{ 
+	background-color: #728A8C;
+}
+div.jqi button.jqidefaultbutton{
+	background-color: #BF5E26;
+}
+.jqiwarning .jqi .jqibuttons{ 
+	background-color: #BF5E26;
+}
+
+
+.jqi .jqiarrow{ position: absolute; height: 0; width:0; line-height: 0; font-size: 0; border: solid 10px transparent;}
+
+
+.jqi .jqiarrowtl{ left: 10px; top: -20px; border-bottom-color: #ffffff; }
+.jqi .jqiarrowtc{ left: 50%; top: -20px; border-bottom-color: #ffffff; margin-left: -10px; }
+.jqi .jqiarrowtr{ right: 10px; top: -20px; border-bottom-color: #ffffff; }
+
+
+.jqi .jqiarrowbl{ left: 10px; bottom: -20px; border-top-color: #ffffff; }
+.jqi .jqiarrowbc{ left: 50%; bottom: -20px; border-top-color: #ffffff; margin-left: -10px; }
+.jqi .jqiarrowbr{ right: 10px; bottom: -20px; border-top-color: #ffffff; }
+
+
+.jqi .jqiarrowlt{ left: -20px; top: 10px; border-right-color: #ffffff; }
+.jqi .jqiarrowlm{ left: -20px; top: 50%; border-right-color: #ffffff; margin-top: -10px; }
+.jqi .jqiarrowlb{ left: -20px; bottom: 10px; border-right-color: #ffffff; }
+
+
+.jqi .jqiarrowrt{ right: -20px; top: 10px; border-left-color: #ffffff; }
+.jqi .jqiarrowrm{ right: -20px; top: 50%; border-left-color: #ffffff; margin-top: -10px; }
+.jqi .jqiarrowrb{ right: -20px; bottom: 10px; border-left-color: #ffffff; }
+
+
+
